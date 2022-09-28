@@ -1,6 +1,11 @@
-# Getting Started with Create React App
+# Getting Started with Youtube Clone App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Features
+1. Login and Logout with Google account
+2. Home page which shows popular videos
+3. Ability to Save vidoes and view in your library.
 
 ## Available Scripts
 
