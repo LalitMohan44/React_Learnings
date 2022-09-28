@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import VideoCard from '../components/Videos/VideoCard';
 import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
 
 class LibraryPage extends Component {
     constructor(props) {
@@ -18,10 +19,12 @@ class LibraryPage extends Component {
             savedVideos = videos.savedVideos
         }
         return (
-            
-            <Grid container  spacing={2} sx={{paddingLeft: 10, paddingTop: 10}}>
+            <>
+            {
+                savedVideos && savedVideos.length
+                ? 
+                    <Grid container  spacing={2} sx={{paddingLeft: 10, paddingTop: 10}}>
                     {
-                        savedVideos &&
                         savedVideos.map((video) => 
                             <Grid item>
                                 <VideoCard key={video.id} video={video}  showVideoMenu={false}/>
@@ -29,6 +32,9 @@ class LibraryPage extends Component {
                         )
                     }
             </Grid>
+                : <Typography variant="h5" sx={{paddingTop: 10 }}>Saved Videos will come up here.</Typography>
+            }
+            </>
         );
     }
 }
